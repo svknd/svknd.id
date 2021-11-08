@@ -30,14 +30,22 @@
         </v-list-item>
       </v-list>
     </v-menu>
-    <v-toolbar-title class="hidden-xs-only">Svknd.id</v-toolbar-title>
+    <v-toolbar-title
+      :class="(scrollY < windowHeight) ? 'white--text' : 'black--text'"
+      class="hidden-xs-only"
+    >
+      <h1 class="font-weight-medium">Svknd.id</h1>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items
       v-for="(menu, i) in menus"
       :key="i"
       class="hidden-xs-only"
     >
-      <v-btn plain>
+      <v-btn
+        :class="(scrollY < windowHeight) ? 'white--text' : 'black--text'"
+        text
+      >
         <v-icon class="pr-2" small>{{ menu.icon }}</v-icon>
         {{ menu.title }}
       </v-btn>
@@ -49,12 +57,35 @@
 export default {
   data() {
     return {
+      scrollY: 0,
+      windowHeight: 0,
       menus: [
         { title: 'Home', icon: 'mdi-home' },
         { title: 'Member', icon: 'mdi-account-group' },
         { title: 'Internship', icon: 'mdi-school' },
         { title: 'Join Us', icon: 'mdi-briefcase-check' },
       ],
+    }
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleHeight);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleHeight);
+  },
+  mounted() {
+    this.$nextTick(function () {
+      this.windowHeight = window.innerHeight;
+    });
+  },
+  methods: {
+    handleScroll () {
+      this.scrollY = window.scrollY;
+    },
+    handleHeight () {
+      this.windowHeight = window.innerHeight;
     }
   }
 }
