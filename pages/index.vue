@@ -1,7 +1,29 @@
 <template>
   <div class="overflow-hidden">
-    <Navbar />
     <main class="scroll-y">
+      <v-parallax
+        src="/home.png"
+        style="height: 100vh;"
+      >
+        <v-overlay
+          absolute
+        >
+          <v-row
+            align="center"
+            justify="center"
+          >
+            <v-col
+              class="text-center"
+            >
+              <v-img
+                src="/logo.png"
+                alt="Logo Savikindo"
+                max-width="200"
+              ></v-img>
+            </v-col>
+          </v-row>
+        </v-overlay>
+      </v-parallax>
       <v-row justify="center" align="center">
         <v-col cols="12" sm="8" md="6">
           <v-card class="px-8 py-5">
