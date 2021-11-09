@@ -3,18 +3,22 @@
     class="bg-primary"
     padless
   >
-    <v-container>
+    <v-container class="pt-3 pt-sm-0">
       <v-row align="center">
         <v-col
           class="pr-0"
-          cols="auto"
+          cols="2"
+          sm="auto"
         >
           <v-icon
             class="text-primary"
             x-large
           >mdi-map-marker</v-icon>
         </v-col>
-        <v-col>
+        <v-col
+          cols="10"
+          sm="4"
+        >
           <span class="text-primary">
             Jl. Kanayakan Lama No 40, Dago,
             Coblong, Bandung Jawa Barat,
@@ -28,7 +32,7 @@
             width="100%"
             class="bg-primary text-center"
           >
-            <v-card-text>
+            <v-card-text class="pt-0 pt-sm-3">
               <v-btn
                 v-for="(link, i) in links"
                 :key="i"
