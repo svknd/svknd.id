@@ -16,7 +16,7 @@
           v-bind="attrs"
           v-on="on"
         >
-          <v-icon>mdi-menu</v-icon>
+          <v-icon color="black">mdi-menu</v-icon>
         </v-btn>
       </template>
       <v-list>
@@ -31,10 +31,10 @@
       </v-list>
     </v-menu>
     <v-toolbar-title
-      :class="(scrollY < windowHeight) ? 'white--text' : 'black--text'"
+      :class="(scrollY < windowHeight - 50) ? 'white--text' : 'black--text'"
       class="hidden-xs-only"
     >
-      <h1 class="font-weight-medium">Svknd.id</h1>
+      <h2 class="font-weight-medium">Svknd.id</h2>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items
@@ -43,7 +43,7 @@
       class="hidden-xs-only"
     >
       <v-btn
-        :class="(scrollY < windowHeight) ? 'white--text' : 'black--text'"
+        :class="(scrollY < windowHeight - 50) ? 'white--text' : 'black--text'"
         text
       >
         <v-icon class="pr-2" small>{{ menu.icon }}</v-icon>
