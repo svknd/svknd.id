@@ -44,6 +44,7 @@
     >
       <v-btn
         :class="computedColor ? 'white--text' : 'black--text'"
+        :href="menu.link"
         text
       >
         <v-icon class="pr-2" small>{{ menu.icon }}</v-icon>
@@ -60,10 +61,10 @@ export default {
       scrollY: 0,
       windowHeight: 0,
       menus: [
-        { title: 'Home', icon: 'mdi-home' },
-        { title: 'Member', icon: 'mdi-account-group' },
-        { title: 'Internship', icon: 'mdi-school' },
-        { title: 'Join Us', icon: 'mdi-briefcase-check' },
+        { title: 'Home', icon: 'mdi-home', link: '/' },
+        { title: 'Member', icon: 'mdi-account-group', link: '' },
+        { title: 'Internship', icon: 'mdi-school', link: '' },
+        { title: 'Join Us', icon: 'mdi-briefcase-check', link: '/join' },
       ],
     }
   },
