@@ -1,6 +1,6 @@
 <template>
   <v-container
-    style="height: 100vh;"
+    :id="$vuetify.breakpoint.name !== 'xs' ? 'screen-height' : ''"
     align="center"
     fill-height
   >
@@ -10,36 +10,66 @@
       justify="space-between"
     >
       <v-col
-        style="background: #FFFFFFBF"
-        cols="auto"
+        style="background: #FFFFFF7F"
+        cols="12"
+        sm="5"
       >
-        <h2>Hubungi Kami</h2>
+        <h2 class="text-right text-sm-left">Hubungi Kami</h2>
         <v-divider
           class="mt-1 mb-5"
         ></v-divider>
-        <div class="mb-3">
-          <v-icon
-            class="pa-3 mr-1 grey lighten-4"
-          >mdi-email</v-icon>
-          <span>info@savikindo.co.id</span>
-        </div>
-        <div>
-          <v-icon
-            class="pa-3 mr-1 grey lighten-4"
-          >mdi-phone</v-icon>
-          <span>(022) 2027 8381</span>
-        </div>
+        <v-container>
+          <v-row
+            class="mb-3"
+            align="center"
+          >
+            <v-col cols="auto">
+              <v-icon
+                class="pa-3 mr-1 grey lighten-3"
+              >mdi-map-marker</v-icon>
+            </v-col>
+            <v-col>
+              <span>
+                Jl. Kanayakan Lama No 40, Dago, Coblong, Bandung
+                Jawa Barat, Indonesia – 40135
+              </span>
+            </v-col>
+          </v-row>
+          <v-row
+            class="mb-3"
+            align="center"
+          >
+            <v-col cols="auto">
+              <v-icon
+                class="pa-3 mr-1 grey lighten-3"
+              >mdi-email</v-icon>
+            </v-col>
+            <v-col>
+              <span>info@savikindo.co.id</span>
+            </v-col>
+          </v-row>
+          <v-row align="center">
+            <v-col cols="auto">
+              <v-icon
+                class="pa-3 mr-1 grey lighten-3"
+              >mdi-phone</v-icon>
+            </v-col>
+            <v-col>
+              <span>(022) 2027 8381</span>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
       <v-col
         class="pa-5 grey lighten-4"
-        cols="4"
+        cols="12"
+        sm="4"
       >
         <form>
           <h2>Kirim Pesan</h2>
           <v-text-field
             label="Nama"
             :rules="nama"
-            autofocus
           ></v-text-field>
           <v-text-field
             label="Email"
@@ -57,7 +87,7 @@
           <v-btn
             class="green lighten-1"
             type="submit"
-          >Submit</v-btn>
+          >Kirim</v-btn>
           <v-btn
             class="amber"
             type="reset"
@@ -106,7 +136,11 @@ export default {
 
 <style>
 #container-image {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/join.jpg');
-  background-size: contain;
+  background: linear-gradient(0deg, #FFFFFF7F, #FFFFFF7F), url('/join.jpg');
+  background-size: auto 100%;
+}
+
+#screen-height {
+  height: 100vh;
 }
 </style>
