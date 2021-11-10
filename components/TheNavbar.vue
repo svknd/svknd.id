@@ -31,7 +31,7 @@
       </v-list>
     </v-menu>
     <v-toolbar-title
-      :class="(scrollY < windowHeight - 50) ? 'white--text' : 'black--text'"
+      :class="computedColor ? 'white--text' : 'black--text'"
       class="hidden-xs-only"
     >
       <h2 class="font-weight-medium">Svknd.id</h2>
@@ -43,7 +43,7 @@
       class="hidden-xs-only"
     >
       <v-btn
-        :class="(scrollY < windowHeight - 50) ? 'white--text' : 'black--text'"
+        :class="computedColor ? 'white--text' : 'black--text'"
         text
       >
         <v-icon class="pr-2" small>{{ menu.icon }}</v-icon>
@@ -65,6 +65,12 @@ export default {
         { title: 'Internship', icon: 'mdi-school' },
         { title: 'Join Us', icon: 'mdi-briefcase-check' },
       ],
+    }
+  },
+  computed: {
+     computedColor () {
+      return (this.scrollY < this.windowHeight - 50)
+        && (this.$route.name === 'index')
     }
   },
   beforeMount() {
