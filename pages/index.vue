@@ -1,76 +1,44 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="px-8 py-5">
-        <NuxtLogo />
-        <VuetifyLogo />
-        <h2 class="py-10 text-center">Selamat datang {{ smk }}</h2>
-        <p>Semangatnya bikin landing pagenya!</p>
-        <p class="mb-0">Referensi website it company :</p>
-        <a href="https://www.xtremax.com" target="_blank"
-          >https://www.xtremax.com</a
-        >
-        <a href="https://www.efishery.com/" target="_blank"
-          >https://www.efishery.com/
-        </a>
-        <a href="https://www.mitrais.com/" target="_blank"
-          >https://www.mitrais.com/</a
-        >
-        <a href="https://www.voxteneo.com/" target="_blank"
-          >https://www.voxteneo.com/</a
-        >
+  <v-main class="black">
+    <v-container class="pa-2 conCard " fluid fill-height>
+      <v-row justify="space-around" align="center">
+        
+        <!-- Bagian 1 -->
+        <v-col cols="12" sm="8" md="4" align-self="center">
+            <v-card 
+            class="px-5 py-1 mx-4"
+            max-width="100%"
+            color="black white--text">
+                <h1>Welcome to the home of the Savikindo Tech</h1>
+                <span>Kami adalah Education Technology Startup yang berpusat di Bandung, Indonesia</span>
+            </v-card>
 
-        <p class="mb-0 mt-4">Referensi landing page yg bagus banyak disini :</p>
-        <a href="https://themeforest.net/" target="_blank"
-          >https://themeforest.net/</a
-        >
+        </v-col>
+        <v-col cols="auto">
+          <v-img src="/welcome.jpg" width="610"></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
 
-        <p class="mb-0 mt-4">
-          Referensi icon atau image buat di halaman website :
-        </p>
-        <a href="https://undraw.co/" target="_blank">https://undraw.co/ </a>
-        <a href="https://www.flaticon.com/ " target="_blank"
-          >https://www.flaticon.com/
-        </a>
-        <a href="https://unsplash.com/" target="_blank"
-          >https://unsplash.com/</a
-        >
-
-        <p class="mb-0 mt-4">ini website nuxt :</p>
-        <a href="https://nuxtjs.org/" target="_blank">https://nuxtjs.org/</a>
-
-        <p class="mb-0 mt-4">
-          ini website vuetify buat component sama cssnya :
-        </p>
-        <a href="https://vuetifyjs.com/en/" target="_blank"
-          >https://vuetifyjs.com/en/</a
-        >
-
-        <marquee behavior="" direction="" class="marquees mt-10">{{
-          semangat
-        }}</marquee>
-      </v-card>
-    </v-col>
-  </v-row>
+    <!-- Bagian 2 -->
+    <v-container class="conCard white" fluid >
+      <h1 class="cente">Tentang Kami</h1>
+      <br>
+      <v-row>
+        <v-col cols="9" offset="3">
+            <v-card width="650px">
+              <p>Produk kami berkonsentrasi pada sistem teknologi pendidikan yang dapat mengakomodir kebutuhan perkembangan pendidikan & sesuai dengan format kebijakan yang diterbitkan oleh Kementerian Pendidikan dan Kebudayaan Indonesia.</p>
+            </v-card>
+        </v-col>
+      </v-row>
+      <br>
+    </v-container>
+  </v-main>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      smk: 'SMKN 13 BANDUNG',
-      semangat: 'SEMANGAT MEREUN GAIS!!!',
-    }
-  },
-  computed: {
-    // ini buat bikin data yg reactive
-  },
-  mounted() {
-    // ini biasanya buat manggil fungsi di method yg harus di panggil di awal page di load
-  },
-  methods: {
-    // ini buat function event
-  },
+ 
 }
 </script>
 
@@ -78,5 +46,16 @@ export default {
 .marquees {
   color: red;
   font-weight: bold;
+}
+h1 {
+  text-align: center;
+}
+conCard {
+  height: 600px;
+  width: 400px;
+}
+
+cente {
+  text-align: center;
 }
 </style>
