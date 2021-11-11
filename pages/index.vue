@@ -1,6 +1,6 @@
 <template>
   <v-main class="black">
-    <v-container class="pa-2 conCard " fluid fill-height>
+    <v-container class="pa-2 conCard " fluid>
       <v-row justify="space-around" align="center">
         
         <!-- Bagian 1 -->
@@ -19,15 +19,20 @@
         </v-col>
       </v-row>
     </v-container>
+    <br>
+    <br>
+    <br>
 
     <!-- Bagian 2 -->
     <v-container class="conCard white" fluid >
-      <h1 class="cente">Tentang Kami</h1>
+      <br>
+      <br>
+      <h1 class="text-center">Tentang Kami</h1>
       <br>
       <v-row>
         <v-col cols="9" offset="3">
             <v-card width="650px">
-              <p>Produk kami berkonsentrasi pada sistem teknologi pendidikan yang dapat mengakomodir kebutuhan perkembangan pendidikan & sesuai dengan format kebijakan yang diterbitkan oleh Kementerian Pendidikan dan Kebudayaan Indonesia.</p>
+              <p>Kami merupakan Startup yang membuat produk dengan berkonsentrasi pada sistem teknologi pendidikan yang dapat mengakomodir kebutuhan perkembangan pendidikan & sesuai dengan format kebijakan yang diterbitkan oleh Kementerian Pendidikan dan Kebudayaan Indonesia.</p>
             </v-card>
         </v-col>
       </v-row>
@@ -53,9 +58,5 @@ h1 {
 conCard {
   height: 600px;
   width: 400px;
-}
-
-cente {
-  text-align: center;
 }
 </style>

@@ -19,12 +19,12 @@
 
     <div class="pr-16">
      <v-btn
-        class="mr-3"
+        class="mr-3 fas fa-phone-square-alt"
         :disabled="loading"
         color="white"
         plain
         v-for= "(menu, a) in menus"
-        :key="a"
+        :key= "a"
         :href= "menu.link"
         style="padding:10px"
       >{{ menu.item }}</v-btn>
@@ -34,7 +34,6 @@
 </template>
 
 <style scoped>
-
 .font{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -60,5 +59,4 @@ export default {
         }
     },
 }
-
 </script>
