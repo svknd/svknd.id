@@ -1,10 +1,13 @@
 <template>
-  <main>
+  <main
+    :class="teams[0].background"
+    class="pt-0 pt-lg-1 pt-sm-8"
+  >
     <v-container
       v-for="(team, i) in teams"
       :key="i"
       :class="team.background"
-      class="px-10 py-10"
+      class="px-10 py-6"
       fill-height
       fluid
     >
