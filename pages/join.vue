@@ -100,11 +100,6 @@
 
 <script>
 export default {
-  head() {
-    return {
-      title: 'Join Us',
-    }
-  },
   data() {
     return {
       nama: [
@@ -130,7 +125,12 @@ export default {
         value => !!value || 'Wajib terisi'
       ]
     }
-  }
+  },
+  head() {
+    return {
+      title: 'Join Us',
+    }
+  },
 }
 </script>
 
