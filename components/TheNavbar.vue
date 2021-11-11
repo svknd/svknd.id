@@ -62,7 +62,7 @@ export default {
       windowHeight: 0,
       menus: [
         { title: 'Home', icon: 'mdi-home', link: '/' },
-        { title: 'Member', icon: 'mdi-account-group', link: '' },
+        { title: 'Members', icon: 'mdi-account-group', link: '/members' },
         { title: 'Internship', icon: 'mdi-school', link: '' },
         { title: 'Join Us', icon: 'mdi-briefcase-check', link: '/join' },
       ],
