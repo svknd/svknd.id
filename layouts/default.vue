@@ -3,6 +3,7 @@
     <v-main class="pa-0">
       <TheNavbar />
       <v-container class="pa-0" fluid>
+        <TheTopButton />
         <Nuxt />
       </v-container>
     </v-main>
