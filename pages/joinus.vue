@@ -1,7 +1,9 @@
 <template>
     <v-container class="white" fluid>
-        <v-container class="teal darken-4 my-5 py-10 con overflow-x-auto"  >
-            <h1 class="text-center pb-5 white--text ">Open Positions</h1>
+        <br><br>
+        <v-container class="teal darken-4 "  >
+            <h1 class="text-center white--text" fixed style="z-index:10">Open Positions</h1>
+        <v-container class="teal darken-4 my-5 py-10 con overflow-x-auto scroll">
             <div
             v-for= "n in 5"
             :key= "n"
@@ -14,14 +16,19 @@
                     </v-container>
             </div>
         </v-container>
+        </v-container>
         <br><br><br>
         <v-container class="grey darken-1 con1">
-            <v-row align="center">
+            <v-row justify="center">
+                <v-col cols="auto">
+                   <h1 class="white--text text-center">Join Us</h1>
+                </v-col>
+            </v-row>
+            <v-row align="end">
                 <v-col cols="4">
                     <v-img src="joinus.svg" class="image"></v-img>
                 </v-col>
                 <v-col cols="8">
-                    <h1 class="white--text text-center">Join Us</h1>
                     <v-text-field
                         label="Nama"
                         placeholder="Masukan Nama"
@@ -45,7 +52,7 @@
                             color="error"
                             >Batal</v-btn>
                         </v-col>
-                        <v-col cols="8" offset="2">
+                        <v-col cols="2" offset="8">
                             <v-btn
                             depressed
                             color="primary"
@@ -81,8 +88,14 @@ export default {
 
 .con1 {
     border-radius: 10px;
-    height: 475px;
+    height: 425px;
     width: 1000px;
+}
+
+.con2 {
+    height: 475px;
+    width: 200px;
+    background-color: white;
 }
 
 .card {
@@ -97,5 +110,27 @@ export default {
 .image {
     height: 300px;
     width: 500px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
 }
 </style>

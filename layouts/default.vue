@@ -104,7 +104,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .child {
   width: 250px;
 }
