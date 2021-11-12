@@ -18,7 +18,9 @@
         cols="auto"
         class="pt-0"
       >
-        <v-card width="200">
+        <v-card
+          :width="$vuetify.breakpoint.xs ? 150 : 200"
+        >
           <v-img :src="intern.photo"></v-img>
           <v-card-title>{{ intern.name }}</v-card-title>
           <v-card-text>{{ intern.text }}</v-card-text>

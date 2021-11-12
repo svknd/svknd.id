@@ -28,7 +28,9 @@
           <v-hover v-slot="{ hover }">
             <v-card
               class="mx-auto"
-              :max-width="hover ? 200 : 150"
+              :max-width="hover ?
+              ($vuetify.breakpoint.xs ? 150 : 200) :
+              ($vuetify.breakpoint.xs ? 100 : 150)"
             >
               <v-img
                 class="white--text align-end"
@@ -37,7 +39,8 @@
                 <v-card-title
                   class="d-block"
                   style="word-break: normal"
-                  :class="hover ? '' : 'text-truncate'"
+                  :class="{'text-truncate': !hover,
+                  'body-1': $vuetify.breakpoint.xs}"
                 >
                   {{ member.name }}
                 </v-card-title>
