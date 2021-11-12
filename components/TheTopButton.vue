@@ -1,7 +1,7 @@
 <template>
   <v-btn
-    :class="{'d-none': scrollY < 32}"
-    class="ma-3 ma-sm-5"
+    :class="{'transform': scrollY < 32}"
+    class="ma-3 ma-sm-5 transition"
     color="#FFC300"
     fixed
     fab
@@ -10,7 +10,10 @@
     small
     @click="scrollToTop"
   >
-    <v-icon>mdi-chevron-up</v-icon>
+    <v-icon
+      :class="{'transform': scrollY < 32}"
+      class="transition"
+    >mdi-chevron-up</v-icon>
   </v-btn>
 </template>
 
@@ -41,3 +44,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.transform {
+  transform: scale(0);
+}
+
+.transition {
+  transition: all 0.3s;
+}
+</style>
