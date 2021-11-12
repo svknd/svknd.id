@@ -1,13 +1,19 @@
 <template>
   <v-app dark>
+    <NavbarTwo />
     <v-main>
-      <v-container>
+      <v-container fluid> 
         <Nuxt />
       </v-container>
+        <v-footer padless>
+    <v-col
+      class="text-center"
+      cols="12"
+    >
+      {{ new Date().getFullYear() }} — <strong>Rifki Ahmad Maulana</strong>
+    </v-col>
+  </v-footer>
     </v-main>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -38,3 +44,9 @@ export default {
   },
 }
 </script>
+<style>
+  html{
+    scroll-behavior: smooth;
+
+  }
+</style>

@@ -1,0 +1,347 @@
+/* Font */
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-SemiBoldItalic.eot");
+  src: local("Hellix SemiBold Italic"), local("Hellix-SemiBoldItalic"), url("fonts/Hellix-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-SemiBoldItalic.woff2") format("woff2"), url("fonts/Hellix-SemiBoldItalic.woff") format("woff"), url("fonts/Hellix-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-Regular.eot");
+  src: local("Hellix Regular"), local("Hellix-Regular"), url("fonts/Hellix-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-Regular.woff2") format("woff2"), url("fonts/Hellix-Regular.woff") format("woff"), url("fonts/Hellix-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-LightItalic.eot");
+  src: local("Hellix Light Italic"), local("Hellix-LightItalic"), url("fonts/Hellix-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-LightItalic.woff2") format("woff2"), url("fonts/Hellix-LightItalic.woff") format("woff"), url("fonts/Hellix-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-MediumItalic.eot");
+  src: local("Hellix Medium Italic"), local("Hellix-MediumItalic"), url("fonts/Hellix-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-MediumItalic.woff2") format("woff2"), url("fonts/Hellix-MediumItalic.woff") format("woff"), url("fonts/Hellix-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-BlackItalic.eot");
+  src: local("Hellix Black Italic"), local("Hellix-BlackItalic"), url("fonts/Hellix-BlackItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-BlackItalic.woff2") format("woff2"), url("fonts/Hellix-BlackItalic.woff") format("woff"), url("fonts/Hellix-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-RegularItalic.eot");
+  src: local("Hellix Regular Italic"), local("Hellix-RegularItalic"), url("fonts/Hellix-RegularItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-RegularItalic.woff2") format("woff2"), url("fonts/Hellix-RegularItalic.woff") format("woff"), url("fonts/Hellix-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-ExtraBoldItalic.eot");
+  src: local("Hellix ExtraBold Italic"), local("Hellix-ExtraBoldItalic"), url("fonts/Hellix-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-ExtraBoldItalic.woff2") format("woff2"), url("fonts/Hellix-ExtraBoldItalic.woff") format("woff"), url("fonts/Hellix-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-SemiBold.eot");
+  src: local("Hellix SemiBold"), local("Hellix-SemiBold"), url("fonts/Hellix-SemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-SemiBold.woff2") format("woff2"), url("fonts/Hellix-SemiBold.woff") format("woff"), url("fonts/Hellix-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-BoldItalic.eot");
+  src: local("Hellix Bold Italic"), local("Hellix-BoldItalic"), url("fonts/Hellix-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-BoldItalic.woff2") format("woff2"), url("fonts/Hellix-BoldItalic.woff") format("woff"), url("fonts/Hellix-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-Light.eot");
+  src: local("Hellix Light"), local("Hellix-Light"), url("fonts/Hellix-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-Light.woff2") format("woff2"), url("fonts/Hellix-Light.woff") format("woff"), url("fonts/Hellix-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-Thin.eot");
+  src: local("Hellix Thin"), local("Hellix-Thin"), url("fonts/Hellix-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-Thin.woff2") format("woff2"), url("fonts/Hellix-Thin.woff") format("woff"), url("fonts/Hellix-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-Bold.eot");
+  src: local("Hellix Bold"), local("Hellix-Bold"), url("fonts/Hellix-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-Bold.woff2") format("woff2"), url("fonts/Hellix-Bold.woff") format("woff"), url("fonts/Hellix-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-ExtraBold.eot");
+  src: local("Hellix ExtraBold"), local("Hellix-ExtraBold"), url("fonts/Hellix-ExtraBold.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-ExtraBold.woff2") format("woff2"), url("fonts/Hellix-ExtraBold.woff") format("woff"), url("fonts/Hellix-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-Black.eot");
+  src: local("Hellix Black"), local("Hellix-Black"), url("fonts/Hellix-Black.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-Black.woff2") format("woff2"), url("fonts/Hellix-Black.woff") format("woff"), url("fonts/Hellix-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-ThinItalic.eot");
+  src: local("Hellix Thin Italic"), local("Hellix-ThinItalic"), url("fonts/Hellix-ThinItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-ThinItalic.woff2") format("woff2"), url("fonts/Hellix-ThinItalic.woff") format("woff"), url("fonts/Hellix-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url("fonts/Hellix-Medium.eot");
+  src: local("Hellix Medium"), local("Hellix-Medium"), url("fonts/Hellix-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Hellix-Medium.woff2") format("woff2"), url("fonts/Hellix-Medium.woff") format("woff"), url("fonts/Hellix-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body,
+.v-application {
+  font-family: 'Hellix', sans-serif !important;
+  color: #0c1932;
+}
+
+@media only screen and (max-width: 600px) {
+  body,
+  .v-application {
+    overflow-x: hidden;
+  }
+}
+
+.navbar {
+  z-index: 1;
+  background: #0E8AA6 !important;
+}
+
+.navbar .navbar-hp {
+  z-index: 2;
+}
+
+.navbar .navbar-hp .btn-hp {
+  background: #11a3c4 !important;
+}
+
+.navbar .logo-savikindo {
+  position: absolute;
+  width: 155px;
+  height: 46.66px;
+}
+
+.navbar .button {
+  color: white !important;
+  font-size: 25px;
+}
+
+.navbar .active {
+  color: #FE9720 !important;
+  font-weight: bold !important;
+}
+
+.home {
+  padding-bottom: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home .slmt {
+  margin-top: 290px;
+  width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+}
+
+.home .slmt .svknd {
+  color: #0E8AA6;
+}
+
+.home .slmt .tch {
+  color: #FE9720;
+}
+
+.home .ic-raksasa {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: 772px;
+  top: 155px !important;
+}
+
+.member {
+  padding: 110px 0;
+  width: 100%;
+  background: #B3F1FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.member .text-member {
+  color: #0E8AA6;
+}
+
+.member .text-member h1,
+.member .text-member p {
+  text-align: center;
+  font-weight: 48px;
+}
+
+.member .card {
+  margin-top: 20px;
+  height: 442px;
+  background: #0E8AA6 !important;
+  border: 5px solid #00A6CB !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 15px !important;
+  padding: 30px;
+}
+
+.member .card .pp-member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 175px !important;
+  height: 175px !important;
+  border-radius: 180% !important;
+}
+
+.member .card .name-posisi {
+  color: white;
+  margin-top: 137px;
+}
+
+.member .card .name-posisi .hd {
+  font-weight: bold;
+  font-size: 25px !important;
+  color: #FE9720;
+}
+
+.internship {
+  padding: 110px 0;
+  width: 100%;
+  width: 100%;
+}
+
+.internship .text-member {
+  color: #0E8AA6;
+}
+
+.internship .text-member h1,
+.internship .text-member p {
+  text-align: center;
+  font-weight: 48px;
+}
+
+.internship .pagination img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.internship .card {
+  padding: 37px 30px !important;
+  background: #B3F1FF !important;
+  border: 4px solid #0E8AA6 !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+.internship .card .pp-orang {
+  float: left;
+  width: 136px;
+  height: 136px;
+  border-radius: 180% !important;
+  margin-right: 15px;
+}
+
+.internship .card .text-orang {
+  margin-top: 28px;
+}
+
+.internship .card .text-orang .nama {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.internship .card .text-orang .sekolah {
+  font-weight: normal;
+}
+
+.internship .card .text-orang .tahun {
+  font-weight: 300;
+}
+
+.joinus {
+  padding: 110px 0;
+  width: 100%;
+  background: #B3F1FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.joinus .text-member {
+  color: #0E8AA6;
+}
+
+.joinus .text-member h1 {
+  text-align: center;
+  font-weight: 48px;
+}
+
+.joinus .card {
+  padding: 50px;
+  background: #F5F5F5;
+  -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25) imporn !important;
+          box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25) imporn !important;
+  border-radius: 15px !important;
+}
+
+.joinus .text-info {
+  font-size: 15px;
+  color: green;
+}
+
+/* helpers */
+/* layout */
+/* per page */
+/*# sourceMappingURL=app.css.map */
