@@ -1,5 +1,61 @@
 <template>
-        <h1>Hai</h1>
+    <v-container class="white" fluid>
+        <v-container class="teal darken-4 my-5 py-10 con overflow-x-auto"  >
+            <h1 class="text-center pb-5 white--text ">Open Positions</h1>
+            <div
+            v-for= "n in 5"
+            :key= "n"
+            class="pb-5 pr-5"
+            >
+                    <v-container class="bungkus teal accent-4">
+                        <v-card class="card teal accent-1">
+
+                        </v-card>
+                    </v-container>
+            </div>
+        </v-container>
+        <br><br><br>
+        <v-container class="grey darken-1 con1">
+            <v-row align="center">
+                <v-col cols="4">
+                    <v-img src="joinus.svg" class="image"></v-img>
+                </v-col>
+                <v-col cols="8">
+                    <h1 class="white--text text-center">Join Us</h1>
+                    <v-text-field
+                        label="Nama"
+                        placeholder="Masukan Nama"
+                    ></v-text-field>
+                    <v-text-field
+                        label="Alamat"
+                        placeholder="Masukan Alamat"
+                    ></v-text-field>
+                    <v-text-field
+                        label="Posisi"
+                        placeholder="Masukan Posisi"
+                    ></v-text-field>
+                    <v-text-field
+                        label="Kontak"
+                        placeholder="Masukan Kontak"
+                    ></v-text-field>
+                    <v-row>
+                        <v-col cols="2">
+                            <v-btn
+                            depressed
+                            color="error"
+                            >Batal</v-btn>
+                        </v-col>
+                        <v-col cols="8" offset="2">
+                            <v-btn
+                            depressed
+                            color="primary"
+                            >Kirim</v-btn>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+        </v-container>
+    </v-container>
 </template>
 
 <script>
@@ -12,4 +68,34 @@ export default {
 
 <style scoped>
 
+.bungkus {
+    height: auto;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.con {
+    border-radius: 10px;
+    height: 525px;
+}
+
+.con1 {
+    border-radius: 10px;
+    height: 475px;
+    width: 1000px;
+}
+
+.card {
+    height: 125px;
+    width: 1000px;
+}
+
+.title {
+ color: white;   
+}
+
+.image {
+    height: 300px;
+    width: 500px;
+}
 </style>
