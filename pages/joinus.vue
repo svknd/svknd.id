@@ -1,9 +1,13 @@
 <template>
-    <v-container class="white" fluid>
+    <v-container
+    fluid>
         <br><br>
-        <v-container class="teal darken-4 "  >
-            <h1 class="text-center white--text" fixed style="z-index:10">Open Positions</h1>
-        <v-container class="teal darken-4 my-5 py-10 con overflow-x-auto scroll">
+        <v-container class="teal darken-4 " style="border-radius:20px;">
+            <h1 class="text-center white--text">Open Positions</h1>
+
+        <v-container 
+        class="teal darken-4 my-5 py-10 con overflow-x-auto scroll hidden-md-and-down"
+        >
             <div
             v-for= "n in 5"
             :key= "n"
@@ -16,9 +20,21 @@
                     </v-container>
             </div>
         </v-container>
+
+        <div class="hidden-xs-and-up">
+            <v-row>
+                <v-col cols="12" class="pa-0 pt-5">
+                    <div>
+                        
+                    </div>
+                </v-col>
+            </v-row>
+        </div>
+
+
         </v-container>
-        <br><br><br>
-        <v-container class="grey darken-1 con1">
+        <br><br>
+        <v-container class="grey darken-1 con1" fluid>
             <v-row justify="center">
                 <v-col cols="auto">
                    <h1 class="white--text text-center">Join Us</h1>
@@ -26,7 +42,7 @@
             </v-row>
             <v-row align="end">
                 <v-col cols="4">
-                    <v-img src="joinus.svg" class="image"></v-img>
+                    <v-img src="/joinus.svg" class="image"></v-img>
                 </v-col>
                 <v-col cols="8">
                     <v-text-field
@@ -45,15 +61,17 @@
                         label="Kontak"
                         placeholder="Masukan Kontak"
                     ></v-text-field>
-                    <v-row>
-                        <v-col cols="2">
+                    <v-row justify="start">
+                        <v-col cols="auto">
                             <v-btn
+                            class="pa-0"
                             depressed
                             color="error"
                             >Batal</v-btn>
                         </v-col>
-                        <v-col cols="2" offset="8">
+                        <v-col cols="auto">
                             <v-btn
+                            class="pa-0"
                             depressed
                             color="primary"
                             >Kirim</v-btn>

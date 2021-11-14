@@ -13,13 +13,33 @@
 
     <v-container class="grey darken-4 mx-0 my-0" fluid>
       <v-row>
-        <v-col cols="3" offset="3">
-          <div class="child">
-            <h4 class="text-center">Hubungi Kami</h4>
-            <br>
-              <p class="pl-7"> <v-icon>mdi-phone</v-icon> : (022) 2027 8381</p>
-              <p class="pl-7"> <v-icon>mdi-nfc-search-variant</v-icon> : info@savikindo.co.id</p>
-              <v-btn
+        <v-col>
+          <v-row justify="end">
+            <v-col cols="auto">
+              <h4 class="text-center">Hubungi Kami</h4>
+              <br>
+              <p class=""> <v-icon>mdi-phone</v-icon> : (022) 2027 8381</p>
+              <p class=""> <v-icon>mdi-nfc-search-variant</v-icon> : info@savikindo.co.id</p>
+            </v-col>
+          </v-row>
+        </v-col>
+        
+        <v-col> 
+          <v-row justify="start">
+            <v-col cols="auto">
+              <div class="child">
+              <h4 class="text-center">Alamat</h4>
+              <br>
+              <p class="pl-1">Jl. Kanayakan Lama No.40, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat 40135</p>
+              </div> 
+            </v-col>
+          </v-row>     
+        </v-col>  
+      </v-row>
+
+      <v-row justify="center">
+        <v-col cols="auto">
+            <v-btn
             v-for= "(button,i) in buttons"
             :key= "i"
             :href= "button.link"
@@ -31,21 +51,13 @@
                 {{ button.icon }}
               </v-icon>
             </v-btn>
-          </div>  
         </v-col>
-        
-        <v-col cols="6">      
-          <div class="child">
-            <h4 class="text-center">Alamat</h4>
-            <br>
-            <p class="pl-1">Jl. Kanayakan Lama No.40, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat 40135</p>
-          </div> 
-        </v-col>  
       </v-row>
+
       <v-row>
         <v-col class="pa-0">
       <v-card class="d-flex justify-center black">
-      <p class="white--text text-center my-3">
+      <p class="white--text text-center my-3 text-xs-caption">
         Savikindo tech ||
           <span class="color">&copy; {{ new Date().getFullYear() }}</span>
         All Right Reserved

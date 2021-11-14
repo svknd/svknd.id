@@ -1,6 +1,8 @@
 <template>
-  <v-main class="black">
-    <v-container class="pa-2 conCard " fluid>
+  <v-main class="pa-0">
+    <v-container 
+    class="pt-16 black" 
+    fluid>
       <v-row justify="space-around" align="center">
         
         <!-- Bagian 1 -->
@@ -9,8 +11,9 @@
             class="px-5 py-1 mx-4"
             max-width="100%"
             color="black white--text">
-                <h1>Welcome to the home of the Savikindo Tech</h1>
-                <span>Kami adalah Education Technology Startup yang berpusat di Bandung, Indonesia</span>
+                <h1 class="mb-5 text-h5 text-sm-h4">Welcome to the home of Savikindo Tech</h1>
+                <hr class="mb-2">
+                <span class="text-subtitle-1">Kami adalah Education Technology Startup yang berpusat di Bandung, Indonesia</span>
             </v-card>
 
         </v-col>
@@ -24,19 +27,21 @@
     <br>
 
     <!-- Bagian 2 -->
-    <v-container class="conCard white" fluid >
+    <v-container class="white" style="height:450px">
       <br>
-      <br>
-      <h1 class="text-center">Tentang Kami</h1>
-      <br>
-      <v-row>
-        <v-col cols="9" offset="3">
-            <v-card width="650px">
-              <p>Kami merupakan Startup yang membuat produk dengan berkonsentrasi pada sistem teknologi pendidikan yang dapat mengakomodir kebutuhan perkembangan pendidikan & sesuai dengan format kebijakan yang diterbitkan oleh Kementerian Pendidikan dan Kebudayaan Indonesia.</p>
-            </v-card>
+      <v-row justify="center" align="center" >
+        <v-col cols="auto">
+          <v-img src="our.svg" height="200px" width="200px"></v-img>
+        </v-col>
+        <v-col  cols="10" >
+             <div class="mb-2 text-h4 text-center ">
+              Tentang Kami
+            </div>
+            <div class="subtitle 1 text-center text-xs-caption">
+              Produk kami berkonsentrasi pada sistem teknologi pendidikan yang dapat mengakomodir kebutuhan perkembangan pendidikan &amp; sesuai dengan format kebijakan yang diterbitkan oleh Kementerian Pendidikan dan Kebudayaan Indonesia.
+            </div>
         </v-col>
       </v-row>
-      <br>
     </v-container>
   </v-main>
 </template>
@@ -55,8 +60,5 @@ export default {
 h1 {
   text-align: center;
 }
-conCard {
-  height: 600px;
-  width: 400px;
-}
+
 </style>
