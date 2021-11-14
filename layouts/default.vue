@@ -13,7 +13,7 @@
 
     <v-container class="grey darken-4 mx-0 my-0" fluid>
       <v-row>
-        <v-col>
+        <v-col class="hidden-sm-and-down">
           <v-row justify="end">
             <v-col cols="auto">
               <h4 class="text-center">Hubungi Kami</h4>
@@ -24,7 +24,7 @@
           </v-row>
         </v-col>
         
-        <v-col> 
+        <v-col class="hidden-sm-and-down"> 
           <v-row justify="start">
             <v-col cols="auto">
               <div class="child">
@@ -38,13 +38,13 @@
       </v-row>
 
       <v-row justify="center">
-        <v-col cols="auto">
+        <v-col cols="auto pa-0">
             <v-btn
             v-for= "(button,i) in buttons"
             :key= "i"
             :href= "button.link"
             target="_blank"
-            class="mx-4 pl-9"
+            class="mr-5"
             icon
             >
               <v-icon>

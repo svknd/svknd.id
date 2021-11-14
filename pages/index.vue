@@ -22,12 +22,9 @@
         </v-col>
       </v-row>
     </v-container>
-    <br>
-    <br>
-    <br>
 
     <!-- Bagian 2 -->
-    <v-container class="white" style="height:450px">
+    <v-container class="white">
       <br>
       <v-row justify="center" align="center" >
         <v-col cols="auto">
