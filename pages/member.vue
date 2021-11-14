@@ -16,25 +16,27 @@
                 <h2>{{part.title}}</h2>
             </v-col>
         </v-row>
-        <v-row class="mx-15 overflow-x-auto flex-nowrap" justify= "start">
+        <v-row 
+        class="mx-15 overflow-x-auto flex-nowrap" 
+        :justify= "(part.card.length < 5) ? 'center' : 'start'"
+        >
             <v-col
-            v-for= "n in part.card"
+            v-for= "(orang, n) in part.card"
             :key= "n"
             cols="auto" 
             >
-                <v-card 
-                height="auto"
-                width="220px" 
-                class="white card"   
-                >
-                    <v-img src="https://via.placeholder.com/120x160"></v-img>
-                    <v-card-text>
-                            {{part.nama}}
-                    </v-card-text>
-                </v-card>
-
-            </v-col>
-        </v-row>
+                        <v-card 
+                        height="auto"
+                        width="220px" 
+                        class="white card"   
+                        >
+                        <v-img src="https://via.placeholder.com/120x160"></v-img>
+                        <v-card-text>
+                                Nama : {{orang.nama}}
+                        </v-card-text>
+                    </v-card>
+                    </v-col>
+                </v-row>
         </v-container>
         </div>
     </v-main>
@@ -48,28 +50,61 @@ export default {
             {
                 warna : 'blue-grey darken-1',
                 title : 'Bagian Administrasi',
-                nama : 'Ini Nama',
-                card : 6,
+                card : [
+                    {
+                        nama : 'Ucup'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                ],
                 justify : 'start',
                 height : 'height:520px'
             },
             {
                 warna : 'red',
                 title : 'Backend',
-                nama : 'Ini Nama',
-                card : 3,
+                card : [
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    
+                ],
                 justify : 'center',
                 height : 'height:510px'
             },
             {
                 warna : 'green',
                 title : 'Frond end',
-                nama : 'Ini Nama',
-                card : 2,
+                card : [
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                ],
                 justify : 'center',
                 height : 'height:510px'
             },
-
         ]
         }
     },

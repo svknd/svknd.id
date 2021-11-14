@@ -1,7 +1,8 @@
 <template>
   <v-main class="pa-0">
     <v-container 
-    class="pt-16 black" 
+    class="pt-5 black"
+    style="" 
     fluid>
       <v-row justify="space-around" align="center">
         
@@ -24,7 +25,7 @@
     </v-container>
 
     <!-- Bagian 2 -->
-    <v-container class="white">
+    <v-container class="white pb-10">
       <br>
       <v-row justify="center" align="center" >
         <v-col cols="auto">

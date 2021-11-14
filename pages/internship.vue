@@ -1,56 +1,127 @@
 <template>
-
-    <v-container class="grey darken-3" style="height:600px" fluid>
-        <v-container class="black" style="height:550px" >
-
-            <v-row class="text-center">
-                <v-col class="my-5" >
-                    <h1 class="white--text" >Internship</h1>
-                </v-col>
-            </v-row>
-
-            <v-row
-            v-for= "(part, n) in parts"
+    <v-main>
+        <div
+        align = "center"
+        >
+        <v-container
+        v-for= "(part, a) in parts"
+        :key= "a"
+        class="mb-5 con"
+        :style= "part.height"
+        static  
+        >
+        <br>
+        <v-row justify="center">
+            <v-col cols="auto">
+                <h2 class="white--text">Internship</h2>
+            </v-col>
+        </v-row>
+        <v-row 
+        class="mx-15 overflow-x-auto flex-nowrap" 
+        :justify= "(part.card.length < 5) ? 'center' : 'start'"
+        >
+            <v-col
+            v-for= "(orang, n) in part.card"
             :key= "n"
-            class="mx-10 overflow-x-auto flex-nowrap" 
-            :justify= "part.justify"
+            cols="auto" 
             >
-
-                <v-col
-                v-for= "n in part.card"
-                :key= "n" 
-                cols="auto" 
-                >
-                    <v-card 
-                    height="375px" 
-                    width="220px"    
-                    >
+                        <v-card 
+                        height="auto"
+                        width="220px" 
+                        class="white card"   
+                        >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
+                        <v-card-text>
+                                Nama : {{orang.nama}}
+                                <hr>
+                                Instansi : {{orang.instansi}}
+                        </v-card-text>
                     </v-card>
-
-                </v-col>
-            </v-row>
-
+                    </v-col>
+                </v-row>
         </v-container>
-    </v-container>
-
+        </div>
+    </v-main>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-            parts : [
-                {
-                card : 4,
-                justify : 'center'
+    data() {
+        return {
+        parts : [
+            {
+                warna : 'blue-grey darken-1',
+                card : [
+                    {
+                        nama : 'Ucup',
+                        instansi : 'SMKN 13 Bandung'
+                    },
+                    {
+                        nama : 'Fadhil Maulana',
+                        instansi : 'SMKN 13 Bandung'
+                    },
+                    {
+                        nama : 'Fadhil Maulana',
+                        instansi : 'SMKN 13 Bandung'
+                    },
+                    {
+                        nama : 'Fadhil Maulana',
+                        instansi : 'SMKN 13 Bandung'
+                    },
+                    {
+                        nama : 'Fadhil Maulana',
+                        instansi : 'SMKN 13 Bandung'
+                    },
+                    {
+                        nama : 'Fadhil Maulana',
+                        instansi : 'SMKN 13 Bandung'
+                    },
+                ],
+                justify : 'start',
+                height : 'height:520px'
             },
-            ]
+            
+        ]
         }
-    }
+    },
 }
 </script>
 
 <style scoped>
+.con {
+    background: black;
+    border: 5px solid black;
+    border-radius: 20px;
+}
 
+.card {
+    border-top-left-radius : 5px; 
+    border-bottom-left-radius : 5px; 
+}
+
+.scroll {
+    overflow-x: auto !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(0, 38, 255); 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(153, 99, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #008d4b; 
+}
 </style>
