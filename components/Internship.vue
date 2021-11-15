@@ -19,7 +19,7 @@
                     </v-card>
                 </v-col>
             </v-row>
-            <!-- <v-row justify="center" class="pagination">
+            <v-row justify="center" class="pagination">
                 <v-col lg="1" md="1" sm="1">
                     <v-row>
                         <img src="back.png" width="50px" alt="">
@@ -30,7 +30,7 @@
                         <img src="next.png" height="50px" alt="">
                     </v-row>
                 </v-col>
-            </v-row> -->
+            </v-row>
         </v-container>  
     </div>
 </template>

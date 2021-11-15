@@ -27,6 +27,10 @@ export default {
       smk: 'SMKN 13 BANDUNG',
       semangat: 'SEMANGAT MEREUN GAIS!!!',
     }
+  },head() {
+    return {
+      title: "Landing Page"
+    };
   },
   computed: {
     // ini buat bikin data yg reactive

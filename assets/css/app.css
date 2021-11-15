@@ -217,9 +217,14 @@ body,
   font-weight: 48px;
 }
 
+.member .bungkus-gallery {
+  background: transparent !important;
+}
+
 .member .card {
   margin-top: 20px;
   height: 442px;
+  width: 370px;
   background: #0E8AA6 !important;
   border: 5px solid #00A6CB !important;
   -webkit-box-sizing: border-box !important;
