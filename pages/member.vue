@@ -2,9 +2,17 @@
     <v-main
     class="red"
     >
-        <h1 class="h2 text-center mb-5 white--text">
-            Tim Kami
-        </h1>
+    <v-row justify="center">
+        <v-col cols="auto">
+            <v-text class="text-h3 font-weight-light">TEAM SAVIKINDO TECH</v-text>
+        </v-col>
+    </v-row>
+
+    <v-row justify="center">
+        <v-col cols="auto">
+            <v-text class="text-h3 font-weight-light">TEAM SAVIKINDO TECH</v-text>
+        </v-col>
+    </v-row>
 
         <div
         align = "center"

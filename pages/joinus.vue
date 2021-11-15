@@ -1,8 +1,16 @@
 <template>
     <!-- Formulir -->
-    <v-main>
-    <v-row>
-        <v-col>
+    <v-main class="teal darken-2">
+
+    <v-container>
+        <v-row justify="center">
+            <v-col cols="auto">
+                <v-text class="text-h3 font-weight-bold">MEMBUKA LOWONGAN POSISI !</v-text>
+            </v-col>
+        </v-row>
+    </v-container>
+
+
             <v-container
     class="red"
     >
@@ -26,9 +34,6 @@
         </v-card>
     </v-container>
     </v-container>
-        </v-col>
-    </v-row>
-    
     
     <v-container class="red darken-1 my-10">
             <v-row justify="center">
