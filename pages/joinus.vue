@@ -1,21 +1,36 @@
 <template>
-
-     <!-- <v-expansion-panels>
-    <v-expansion-panel
-      v-for="(item,i) in 5"
-      :key="i"
-    >
-      <v-expansion-panel-header>
-        Item
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-  </v-expansion-panels> -->
-
     <!-- Formulir -->
-    <v-container class="grey darken-1 con1 my-10" fluid>
+    <v-main>
+    <v-row>
+        <v-col>
+            <v-container
+    class="red"
+    >
+    <v-container 
+    style="height:600px"
+    class="black overflow-y-auto flex-nowrap con"> 
+        <v-card 
+        v-for= "(part, i) in parts"
+        :key= "i"
+        :class= "part.color"
+        class="con">
+            <v-card-title class="text-center">
+                <v-text class="h6">{{part.title}}</v-text>
+            </v-card-title>
+            <hr>
+            <v-card-text>
+                <v-text class="subtitle-1">
+                    {{part.content}}
+                </v-text>
+            </v-card-text>
+        </v-card>
+    </v-container>
+    </v-container>
+        </v-col>
+    </v-row>
+    
+    
+    <v-container class="red darken-1 my-10">
             <v-row justify="center">
                 <v-col cols="auto">
                    <h1 class="white--text text-center">Join Us</h1>
@@ -61,6 +76,7 @@
                 </v-col>
             </v-row>
         </v-container>
+        </v-main>
         <!-- Akhir dari form -->
 
 </template>    
@@ -69,7 +85,24 @@
 export default {
     data(){
         return {
-                
+            parts : [
+                {
+                    title : 'Frontend Developer',
+                    content : 'Mengembangkan fitur web interface baru untuk pengguna, membuat kode yang reusable ,Menjamin kelayakan teknis dari desain UI/UX, Menjamin semua input pengguna divalidasi dikirim  ke back-end.'
+                },
+                {
+                    title : 'Frontend Developer',
+                    content : 'Mengembangkan fitur web interface baru untuk pengguna, membuat kode yang reusable ,Menjamin kelayakan teknis dari desain UI/UX, Menjamin semua input pengguna divalidasi dikirim  ke back-end.'
+                },
+                {
+                    title : 'Frontend Developer',
+                    content : 'Mengembangkan fitur web interface baru untuk pengguna, membuat kode yang reusable ,Menjamin kelayakan teknis dari desain UI/UX, Menjamin semua input pengguna divalidasi dikirim  ke back-end.'
+                },
+                {
+                    title : 'Frontend Developer',
+                    content : 'Mengembangkan fitur web interface baru untuk pengguna, membuat kode yang reusable ,Menjamin kelayakan teknis dari desain UI/UX, Menjamin semua input pengguna divalidasi dikirim  ke back-end.'
+                },
+            ]
         }   
     }
 }
@@ -85,8 +118,7 @@ export default {
 
 .con {
     border-radius: 10px;
-    height: 525px;
-    border: 5px solid black;
+    border: 2px solid black;
 }
 
 .con1 {
@@ -117,7 +149,7 @@ export default {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 
 /* Track */
@@ -134,6 +166,6 @@ export default {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+  background: blueviolet; 
 }
 </style>

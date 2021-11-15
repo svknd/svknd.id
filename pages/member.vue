@@ -37,7 +37,8 @@
                         <v-card 
                         height="auto"
                         width="220px" 
-                        class="white card"   
+                        class="white card"  
+                        style="border:5px solid black" 
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>

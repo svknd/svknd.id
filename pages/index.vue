@@ -1,8 +1,8 @@
 <template>
-  <v-main class="pa-0">
+  <v-main class="pa-0 black">
     <v-container 
-    class="pt-5 black"
-    style="" 
+    class="pt-5 black fill-height"
+    style= "height:100vh"
     fluid>
       <v-row justify="space-around" align="center">
         
@@ -19,19 +19,21 @@
 
         </v-col>
         <v-col cols="auto">
-          <v-img src="/welcome.jpg" width="610"></v-img>
+          <v-img src="/welcome.jpg" width="510" class="hidden-sm-and-down ml-md-5"></v-img>
         </v-col>
       </v-row>
     </v-container>
 
     <!-- Bagian 2 -->
-    <v-container class="white pb-10">
-      <br>
+    <v-container class="white pb-10" style="height:auto" fluid>
+      <br><br>
       <v-row justify="center" align="center" >
         <v-col cols="auto">
           <v-img src="our.svg" height="200px" width="200px"></v-img>
         </v-col>
-        <v-col  cols="10" >
+        </v-row>
+        <v-row justify="center">
+        <v-col  cols="auto" >
              <div class="mb-2 text-h4 text-center ">
               Tentang Kami
             </div>
