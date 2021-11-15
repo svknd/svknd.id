@@ -1,12 +1,20 @@
 <template>
-    <v-main>
+    <v-main
+    class="red"
+    >
+        <h1 class="h2 text-center mb-5 white--text">
+            Tim Kami
+        </h1>
+
         <div
         align = "center"
         >
+
+        <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->    
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con"
+        class="mb-5 con hidden-sm-and-up"
         :style= "part.height"
         static  
         >
@@ -16,9 +24,10 @@
                 <h2>{{part.title}}</h2>
             </v-col>
         </v-row>
+        
         <v-row 
         class="mx-15 overflow-x-auto flex-nowrap" 
-        :justify= "(part.card.length < 5) ? 'center' : 'start'"
+        justify= "start" 
         >
             <v-col
             v-for= "(orang, n) in part.card"
@@ -32,7 +41,50 @@
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
+                            <hr>
                                 Nama : {{orang.nama}}
+                            <hr>
+                        </v-card-text>
+                    </v-card>
+                    </v-col>
+                </v-row>
+        </v-container>
+
+
+        <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran laptop -->
+        <v-container
+        v-for= "(part, a) in parts"
+        :key= "a"
+        class="mb-5 con hidden-xs-only"
+        :style= "part.height"
+        static  
+        >
+        <br>
+        <v-row justify="center">
+            <v-col cols="auto">
+                <h2>{{part.title}}</h2>
+            </v-col>
+        </v-row>
+        
+        <v-row 
+        class="mx-15 overflow-x-auto flex-nowrap" 
+        :justify= "(part.card.length < 5) ? 'center' : 'start'" 
+        >
+            <v-col
+            v-for= "(orang, n) in part.card"
+            :key= "n"
+            cols="auto" 
+            >
+                        <v-card 
+                        height="auto"
+                        width="220px" 
+                        class="white card"   
+                        >
+                        <v-img src="https://via.placeholder.com/120x160"></v-img>
+                        <v-card-text>
+                            <hr>
+                                Nama : {{orang.nama}}
+                            <hr>
                         </v-card-text>
                     </v-card>
                     </v-col>
@@ -86,7 +138,33 @@ export default {
                     {
                         nama : 'Fadhil Maulana'
                     },
-                    
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
+                    {
+                        nama : 'Fadhil Maulana'
+                    },
                 ],
                 justify : 'center',
                 height : 'height:510px'

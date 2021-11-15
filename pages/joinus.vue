@@ -1,40 +1,21 @@
 <template>
-    <v-container
-    fluid>
-        <br><br>
-        <v-container class="teal darken-4 " style="border-radius:20px;">
-            <h1 class="text-center white--text">Open Positions</h1>
 
-        <v-container 
-        class="teal darken-4 my-5 py-10 con overflow-x-auto scroll hidden-md-and-down"
-        >
-            <div
-            v-for= "n in 5"
-            :key= "n"
-            class="pb-5 pr-5"
-            >
-                    <v-container class="bungkus teal accent-4">
-                        <v-card class="card teal accent-1">
+     <!-- <v-expansion-panels>
+    <v-expansion-panel
+      v-for="(item,i) in 5"
+      :key="i"
+    >
+      <v-expansion-panel-header>
+        Item
+      </v-expansion-panel-header>
+      <v-expansion-panel-content>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+  </v-expansion-panels> -->
 
-                        </v-card>
-                    </v-container>
-            </div>
-        </v-container>
-
-        <div class="hidden-xs-and-up">
-            <v-row>
-                <v-col cols="12" class="pa-0 pt-5">
-                    <div>
-                        
-                    </div>
-                </v-col>
-            </v-row>
-        </div>
-
-
-        </v-container>
-        <br><br>
-        <v-container class="grey darken-1 con1" fluid>
+    <!-- Formulir -->
+    <v-container class="grey darken-1 con1 my-10" fluid>
             <v-row justify="center">
                 <v-col cols="auto">
                    <h1 class="white--text text-center">Join Us</h1>
@@ -80,13 +61,16 @@
                 </v-col>
             </v-row>
         </v-container>
-    </v-container>
-</template>
+        <!-- Akhir dari form -->
+
+</template>    
 
 <script>
 export default {
     data(){
-
+        return {
+                
+        }   
     }
 }
 </script>
@@ -102,6 +86,7 @@ export default {
 .con {
     border-radius: 10px;
     height: 525px;
+    border: 5px solid black;
 }
 
 .con1 {

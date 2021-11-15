@@ -3,10 +3,52 @@
         <div
         align = "center"
         >
+
+        <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con"
+        class="mb-5 con hidden-sm-and-up"
+        :style= "part.height"
+        static  
+        >
+        <br>
+        <v-row justify="center">
+            <v-col cols="auto">
+                <h2 class="white--text">Internship</h2>
+            </v-col>
+        </v-row>
+        
+        <v-row 
+        class="mx-15 overflow-x-auto flex-nowrap" 
+        justify= "start" 
+        >
+            <v-col
+            v-for= "(orang, n) in part.card"
+            :key= "n"
+            cols="auto" 
+            >
+                        <v-card 
+                        height="auto"
+                        width="220px" 
+                        class="white card"   
+                        >
+                        <v-img src="https://via.placeholder.com/120x160"></v-img>
+                        <v-card-text>
+                                Nama : {{orang.nama}}
+                                <hr>
+                                Instansi : {{orang.instansi}}
+                        </v-card-text>
+                    </v-card>
+                    </v-col>
+                </v-row>
+        </v-container>
+
+        <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran laptop -->
+        <v-container
+        v-for= "(part, a) in parts"
+        :key= "a"
+        class="mb-5 con hidden-xs-only"
         :style= "part.height"
         static  
         >
@@ -65,7 +107,7 @@ export default {
                         instansi : 'SMKN 13 Bandung'
                     },
                     {
-                        nama : 'Fadhil Maulana',
+                        nama : 'Ucup',
                         instansi : 'SMKN 13 Bandung'
                     },
                     {
@@ -77,8 +119,6 @@ export default {
                         instansi : 'SMKN 13 Bandung'
                     },
                 ],
-                justify : 'start',
-                height : 'height:520px'
             },
             
         ]
