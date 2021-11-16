@@ -17,7 +17,7 @@
          <v-col align-self="center">
              <v-row justify="center">
                  <v-col cols="auto">
-                     <v-img src="lowongan.svg" class="image1"></v-img>
+                     <v-img src="/lowongan.svg" class="image1"></v-img>
                  </v-col>
              </v-row>
         </v-col>
