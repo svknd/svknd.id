@@ -17,7 +17,7 @@
          <v-col align-self="center">
              <v-row justify="center">
                  <v-col cols="auto">
-                     <v-img src="lowongan.svg" max-width="500px"></v-img>
+                     <v-img src="lowongan.svg" class="image1"></v-img>
                  </v-col>
              </v-row>
         </v-col>
@@ -159,6 +159,10 @@ export default {
 .image {
     height: 350px;
     width: 500px;
+}
+
+.image1 {
+    max-width: 500px;
 }
 
 /* width */
