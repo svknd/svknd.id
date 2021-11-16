@@ -106,7 +106,7 @@ export default {
         return {
             parts : [
                 {
-                    title : 'Frontend Developer',
+                    title : 'Backend Developer',
                     content : 'Mengembangkan fitur web interface baru untuk pengguna, membuat kode yang reusable ,Menjamin kelayakan teknis dari desain UI/UX, Menjamin semua input pengguna divalidasi dikirim  ke back-end.'
                 },
                 {
