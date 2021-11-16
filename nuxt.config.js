@@ -28,7 +28,7 @@ export default {
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
-      href: '/favicon.ico'
+      href: '/ic-savikindo.png'
     }]
   },
 
