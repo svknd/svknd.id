@@ -1,5 +1,5 @@
 <template>
-    <v-main>
+    <v-main class="cyan accent-2">
         <div
         align = "center"
         >
@@ -8,14 +8,14 @@
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con hidden-sm-and-up"
+        class="mb-5 con hidden-sm-and-up teal darken-3 mb-16"
         :style= "part.height"
         static  
         >
         <br>
         <v-row justify="center">
             <v-col cols="auto">
-                <h2 class="white--text">Internship</h2>
+                <v-text class="text-h5 font-weight-bold white--text">Internship</v-text>
             </v-col>
         </v-row>
         
@@ -28,18 +28,22 @@
             :key= "n"
             cols="auto" 
             >
+                <v-hover v-slot= "{ hover }">
                         <v-card 
                         height="auto"
                         width="220px" 
-                        class="white card"   
+                        class="white card"
+                        :elevation="hover ? 20 : 2"
+                        :class="{ 'on-hover': hover }"   
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
-                                Nama : {{orang.nama}}
+                                {{orang.nama}}
                                 <hr>
-                                Instansi : {{orang.instansi}}
+                                {{orang.instansi}}
                         </v-card-text>
                     </v-card>
+                </v-hover>
                     </v-col>
                 </v-row>
         </v-container>
@@ -48,14 +52,14 @@
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con hidden-xs-only"
+        class="mb-5 con hidden-xs-only teal darken-3 mb-16"
         :style= "part.height"
         static  
         >
         <br>
         <v-row justify="center">
             <v-col cols="auto">
-                <h2 class="white--text">Internship</h2>
+                <v-text class="text-h5 font-weight-bold white--text">Internship</v-text>
             </v-col>
         </v-row>
         <v-row 
@@ -67,18 +71,22 @@
             :key= "n"
             cols="auto" 
             >
+                <v-hover v-slot= "{ hover }">
                         <v-card 
                         height="auto"
                         width="220px" 
                         class="white card"   
+                        :elevation="hover ? 20 : 2"
+                        :class="{ 'on-hover': hover }" 
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
-                                Nama : {{orang.nama}}
+                                {{orang.nama}}
                                 <hr>
-                                Instansi : {{orang.instansi}}
+                                {{orang.instansi}}
                         </v-card-text>
                     </v-card>
+                </v-hover>
                     </v-col>
                 </v-row>
                 <br>
@@ -130,7 +138,6 @@ export default {
 
 <style scoped>
 .con {
-    background: black;
     border: 5px solid black;
     border-radius: 20px;
 }

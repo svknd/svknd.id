@@ -1,24 +1,32 @@
 <template>
     <v-main
-    class="red"
+    class="teal darken-2"
     >
-    <v-row justify="center">
+    <v-container class="mb-3">
+    <v-row justify="center hidden-sm-and-up text-decoration-underline">
         <v-col cols="auto">
-            <v-text class="text-h3 font-weight-light">TEAM SAVIKINDO TECH</v-text>
+            <v-text class="text-h5 font-weight-bold text-decoration-underline">TEAM SAVIKINDO TECH</v-text>
         </v-col>
     </v-row>
 
-    <v-row justify="center">
+    <v-row justify="center hidden-md-and-up hidden-xs-only text-decoration-underline">
         <v-col cols="auto">
-            <v-text class="text-h3 font-weight-light">TEAM SAVIKINDO TECH</v-text>
+            <v-text class="text-h4 font-weight-bold text-decoration-underline">TEAM SAVIKINDO TECH</v-text>
         </v-col>
     </v-row>
+
+    <v-row justify="center hidden-sm-and-down">
+        <v-col cols="auto">
+            <v-text class="text-h2 font-weight-bold text-decoration-underline">TEAM SAVIKINDO TECH</v-text>
+        </v-col>
+    </v-row>
+    </v-container>
 
         <div
         align = "center"
         >
 
-        <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->    
+        <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
@@ -35,30 +43,32 @@
         
         <v-row 
         class="mx-15 overflow-x-auto flex-nowrap" 
-        justify= "start" 
+        justify= "start"
+        style="border:5px solid black" 
         >
             <v-col
             v-for= "(orang, n) in part.card"
             :key= "n"
             cols="auto" 
             >
+            <v-hover v-slot= "{ hover }">
                         <v-card 
                         height="auto"
                         width="220px" 
                         class="white card"  
                         style="border:5px solid black" 
+                        :elevation="hover ? 20 : 2"
+                        :class="{ 'on-hover': hover }" 
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
-                            <hr>
-                                Nama : {{orang.nama}}
-                            <hr>
+                           <v-text class="text-h5 font-weight-bold">{{part.title}}</v-text>
                         </v-card-text>
                     </v-card>
+            </v-hover>
                     </v-col>
                 </v-row>
         </v-container>
-
 
         <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran laptop -->
         <v-container
@@ -71,7 +81,7 @@
         <br>
         <v-row justify="center">
             <v-col cols="auto">
-                <h2>{{part.title}}</h2>
+                <v-text class="text-h5 font-weight-bold">{{part.title}}</v-text>
             </v-col>
         </v-row>
         
@@ -82,20 +92,24 @@
             <v-col
             v-for= "(orang, n) in part.card"
             :key= "n"
-            cols="auto" 
+            cols="auto"
             >
+                    <v-hover v-slot= "{ hover }">
                         <v-card 
                         height="auto"
                         width="220px" 
-                        class="white card"   
+                        class="white card"  
+                        :elevation="hover ? 20 : 2"
+                        :class="{ 'on-hover': hover }" 
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
                             <hr>
-                                Nama : {{orang.nama}}
+                            {{orang.nama}}
                             <hr>
                         </v-card-text>
                     </v-card>
+                    </v-hover>
                     </v-col>
                 </v-row>
         </v-container>
@@ -131,8 +145,8 @@ export default {
                         nama : 'Fadhil Maulana'
                     },
                 ],
-                justify : 'start',
-                height : 'height:520px'
+                  height : 'height:520px'
+    
             },
             {
                 warna : 'red',
@@ -175,12 +189,12 @@ export default {
                         nama : 'Fadhil Maulana'
                     },
                 ],
-                justify : 'center',
-                height : 'height:510px'
+                height : 'height:520px'
+
             },
             {
                 warna : 'green',
-                title : 'Frond end',
+                title : 'Frondend',
                 card : [
                     {
                         nama : 'Fadhil Maulana'
@@ -189,8 +203,8 @@ export default {
                         nama : 'Fadhil Maulana'
                     },
                 ],
-                justify : 'center',
                 height : 'height:510px'
+        
             },
         ]
         }
@@ -199,6 +213,10 @@ export default {
 </script>
 
 <style scoped>
+.show-btns {
+  color: rgb(0, 255, 234) !important;
+}
+
 .con {
     background-image: linear-gradient(to bottom right, rgb(5, 233, 165) , green, red);
     border: 5px solid black;
@@ -227,12 +245,12 @@ export default {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(153, 99, 0); 
+  background: rgb(0, 1, 78); 
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #008d4b; 
+  background: black; 
 }
 </style>

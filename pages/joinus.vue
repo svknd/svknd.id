@@ -2,12 +2,24 @@
     <!-- Formulir -->
     <v-main class="teal darken-2">
 
-    <v-container>
-        <v-row justify="center">
-            <v-col cols="auto">
-                <v-text class="text-h3 font-weight-bold">MEMBUKA LOWONGAN POSISI !</v-text>
-            </v-col>
-        </v-row>
+    <v-container class="mb-1">
+    <v-row justify="center hidden-sm-and-up text-decoration-underline">
+        <v-col cols="auto">
+            <v-text class="text-subtitle-1 font-weight-bold text-decoration-underline">MEMBUKA LOWONGAN PEKERJAAN!</v-text>
+        </v-col>
+    </v-row>
+
+    <v-row justify="center hidden-md-and-up hidden-xs-only text-decoration-underline">
+        <v-col cols="auto">
+            <v-text class="text-h4 font-weight-bold text-decoration-underline">MEMBUKA LOWONGAN PEKERJAAN!</v-text>
+        </v-col>
+    </v-row>
+
+    <v-row justify="center hidden-sm-and-down">
+        <v-col cols="auto">
+            <v-text class="text-h3 font-weight-bold text-decoration-underline">MEMBUKA LOWONGAN PEKERJAAN!</v-text>
+        </v-col>
+    </v-row>
     </v-container>
 
 
