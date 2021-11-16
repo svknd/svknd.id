@@ -1,6 +1,6 @@
 <template>
     <!-- Formulir -->
-    <v-main class="teal darken-2">
+    <v-main class="green darken-4">
 
     <v-container class="mb-1">
     <v-row justify="center hidden-sm-and-up text-decoration-underline">
