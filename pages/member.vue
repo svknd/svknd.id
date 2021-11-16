@@ -1,23 +1,11 @@
 <template>
-    <v-main
-    class="teal darken-2"
-    >
+    <v-main>
     <v-container class="mb-3">
-    <v-row justify="center hidden-sm-and-up text-decoration-underline">
+    <v-row justify="center">
         <v-col cols="auto">
-            <v-text class="text-h5 font-weight-bold text-decoration-underline">TEAM SAVIKINDO TECH</v-text>
-        </v-col>
-    </v-row>
-
-    <v-row justify="center hidden-md-and-up hidden-xs-only text-decoration-underline">
-        <v-col cols="auto">
-            <v-text class="text-h4 font-weight-bold text-decoration-underline">TEAM SAVIKINDO TECH</v-text>
-        </v-col>
-    </v-row>
-
-    <v-row justify="center hidden-sm-and-down">
-        <v-col cols="auto">
-            <v-text class="text-h2 font-weight-bold text-decoration-underline">TEAM SAVIKINDO TECH</v-text>
+            <v-text class="text-h3 font-weight-bold">
+              <font class="title1">TEAM SAVIKINDO</font><font class="title2"> TECH</font> 
+            </v-text>
         </v-col>
     </v-row>
     </v-container>
@@ -28,10 +16,11 @@
 
         <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->
         <v-container
+        class = "mb-5 table hidden-sm-and-up"
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con hidden-sm-and-up"
-        :style= "part.height"
+        :class= "part.warna"
+        style = "height:auto; border:20px solid black;"
         static  
         >
         <br>
@@ -43,8 +32,7 @@
         
         <v-row 
         class="mx-15 overflow-x-auto flex-nowrap" 
-        justify= "start"
-        style="border:5px solid black" 
+        justify= "start" 
         >
             <v-col
             v-for= "(orang, n) in part.card"
@@ -56,7 +44,6 @@
                         height="auto"
                         width="220px" 
                         class="white card"  
-                        style="border:5px solid black" 
                         :elevation="hover ? 20 : 2"
                         :class="{ 'on-hover': hover }" 
                         >
@@ -76,8 +63,10 @@
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con hidden-xs-only"
+        class="mb-5 hidden-xs-only"
+        :class= "part.warna"
         :style= "part.height"
+        style = "border-radius:20px"
         static  
         >
         <br>
@@ -126,7 +115,7 @@ export default {
         parts : [
             {
                 warna : 'blue-grey darken-1',
-                title : 'Bagian Administrasi',
+                title : 'BAGIAN ADMINISTRASI',
                 card : [
                     {
                         nama : 'Ucup'
@@ -147,12 +136,13 @@ export default {
                         nama : 'Fadhil Maulana'
                     },
                 ],
-                  height : 'height:520px'
+                  height : 'height:520px',
+                  color : 'teal darken-4'
     
             },
             {
                 warna : 'red',
-                title : 'Backend',
+                title : 'BACKEND',
                 card : [
                     {
                         nama : 'Fadhil Maulana'
@@ -191,12 +181,13 @@ export default {
                         nama : 'Fadhil Maulana'
                     },
                 ],
-                height : 'height:520px'
+                height : 'height:520px',
+                color : 'black'
 
             },
             {
                 warna : 'green',
-                title : 'Frondend',
+                title : 'FRONTEND',
                 card : [
                     {
                         nama : 'Fadhil Maulana'
@@ -205,7 +196,8 @@ export default {
                         nama : 'Fadhil Maulana'
                     },
                 ],
-                height : 'height:510px'
+                height : 'height:510px',
+                color : 'red'
         
             },
         ]
@@ -215,12 +207,16 @@ export default {
 </script>
 
 <style scoped>
+.table {
+    border : 5px solid black;
+    text-shadow: black;
+}
+
 .show-btns {
   color: rgb(0, 255, 234) !important;
 }
 
 .con {
-    background-image: linear-gradient(to bottom right, rgb(5, 233, 165) , green, red);
     border: 5px solid black;
     border-radius: 20px;
 }
@@ -230,6 +226,12 @@ export default {
     border-bottom-left-radius : 5px; 
 }
 
+.title1 {
+    color: rgb(0, 102, 77);   
+}
+.title2{
+    color: rgb(143, 69, 0);
+}
 .scroll {
     overflow-x: auto !important;
 }

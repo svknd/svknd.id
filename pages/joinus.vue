@@ -1,39 +1,41 @@
 <template>
     <!-- Formulir -->
-    <v-main class="green darken-4">
-
-    <v-container class="mb-1">
-    <v-row justify="center hidden-sm-and-up text-decoration-underline">
-        <v-col cols="auto">
-            <v-text class="text-subtitle-1 font-weight-bold text-decoration-underline">MEMBUKA LOWONGAN PEKERJAAN!</v-text>
+    <v-main class="pt-0">
+    <v-container >
+    <v-row 
+    style=""
+    justify="center"
+    >
+        <v-col cols="auto" align-self="center">
+            <v-text class="font-weight-bold text-h5 text-sm-h4 text-md-h3">
+                <font class="title1">MEMBUKA LOWONGAN</font>
+                <br>
+                <font class="title2">PEKERJAAN</font>
+            </v-text>
+            <br>
         </v-col>
-    </v-row>
-
-    <v-row justify="center hidden-md-and-up hidden-xs-only text-decoration-underline">
-        <v-col cols="auto">
-            <v-text class="text-h4 font-weight-bold text-decoration-underline">MEMBUKA LOWONGAN PEKERJAAN!</v-text>
-        </v-col>
-    </v-row>
-
-    <v-row justify="center hidden-sm-and-down">
-        <v-col cols="auto">
-            <v-text class="text-h3 font-weight-bold text-decoration-underline">MEMBUKA LOWONGAN PEKERJAAN!</v-text>
+         <v-col align-self="center">
+             <v-row justify="center">
+                 <v-col cols="auto">
+                     <v-img src="joinus.svg" max-width="500px"></v-img>
+                 </v-col>
+             </v-row>
         </v-col>
     </v-row>
     </v-container>
 
 
-            <v-container
-    class="red"
+    <v-container
+    class="con1"
     >
     <v-container 
     style="height:600px"
-    class="black overflow-y-auto flex-nowrap con"> 
+    class="black overflow-y-auto flex-nowrap pb-5"> 
         <v-card 
         v-for= "(part, i) in parts"
         :key= "i"
-        :class= "part.color"
-        class="con">
+        class= "con"
+        >
             <v-card-title class="text-center">
                 <v-text class="h6">{{part.title}}</v-text>
             </v-card-title>
@@ -47,15 +49,15 @@
     </v-container>
     </v-container>
     
-    <v-container class="red darken-1 my-10">
+    <v-container class="my-10 con1" >
             <v-row justify="center">
                 <v-col cols="auto">
-                   <h1 class="white--text text-center">Join Us</h1>
+                   <v-text class="white--text text-center text-h3 font-weight-bold">JOIN US</v-text>
                 </v-col>
             </v-row>
             <v-row align="end">
                 <v-col cols="4">
-                    <v-img src="/joinus.svg" class="image"></v-img>
+                    <v-img src="/join.svg" class="image"></v-img>
                 </v-col>
                 <v-col cols="8">
                     <v-text-field
@@ -134,20 +136,12 @@ export default {
 }
 
 .con {
-    border-radius: 10px;
     border: 2px solid black;
 }
 
 .con1 {
+    background-color: #3F3D56;
     border-radius: 10px;
-    height: 425px;
-    width: 1000px;
-}
-
-.con2 {
-    height: 475px;
-    width: 200px;
-    background-color: white;
 }
 
 .card {
@@ -155,12 +149,15 @@ export default {
     width: 1000px;
 }
 
-.title {
- color: white;   
+.title1 {
+    color: rgb(0, 102, 77);   
+}
+.title2{
+    color: rgb(143, 69, 0);
 }
 
 .image {
-    height: 300px;
+    height: 350px;
     width: 500px;
 }
 
