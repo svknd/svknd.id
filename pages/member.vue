@@ -62,7 +62,9 @@
                         >
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
-                           <v-text class="text-h5 font-weight-bold">{{part.title}}</v-text>
+                           <hr>
+                            {{orang.nama}}
+                            <hr>
                         </v-card-text>
                     </v-card>
             </v-hover>
