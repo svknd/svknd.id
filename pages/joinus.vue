@@ -162,7 +162,7 @@ export default {
 }
 
 .image1 {
-    max-width: 500px;
+    width: 500px;
 }
 
 /* width */
