@@ -10,14 +10,14 @@
             <v-text class="font-weight-bold text-h5 text-sm-h4 text-md-h3">
                 <font class="title1">MEMBUKA LOWONGAN</font>
                 <br>
-                <font class="title2">KERJA</font>
+                <font class="title2">PEKERJAAN</font>
             </v-text>
             <br>
         </v-col>
          <v-col align-self="center">
              <v-row justify="center">
                  <v-col cols="auto">
-                     <v-img src="join.svg" max-width=""></v-img>
+                     <v-img src="lowongan.svg" max-width="500px"></v-img>
                  </v-col>
              </v-row>
         </v-col>
@@ -57,7 +57,7 @@
             </v-row>
             <v-row align="end">
                 <v-col cols="4">
-                    <v-img src="/lowongan.svg" class="image"></v-img>
+                    <v-img src="/join.svg" class="image"></v-img>
                 </v-col>
                 <v-col cols="8">
                     <v-text-field
