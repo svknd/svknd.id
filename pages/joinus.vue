@@ -10,7 +10,7 @@
             <v-text class="font-weight-bold text-h5 text-sm-h4 text-md-h3">
                 <font class="title1">MEMBUKA LOWONGAN</font>
                 <br>
-                <font class="title2">PEKERJAAN</font>
+                <font class="title2">KERJA</font>
             </v-text>
             <br>
         </v-col>
