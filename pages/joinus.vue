@@ -17,7 +17,7 @@
          <v-col align-self="center">
              <v-row justify="center">
                  <v-col cols="auto">
-                     <v-img src="lowongan.svg" max-width=""></v-img>
+                     <v-img src="join.svg" max-width=""></v-img>
                  </v-col>
              </v-row>
         </v-col>
@@ -57,7 +57,7 @@
             </v-row>
             <v-row align="end">
                 <v-col cols="4">
-                    <v-img src="/join.svg" class="image"></v-img>
+                    <v-img src="/lowongan.svg" class="image"></v-img>
                 </v-col>
                 <v-col cols="8">
                     <v-text-field
