@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -56,6 +57,44 @@
 
 <script>
 export default {
+=======
+<template class="overvlow-hidden">
+<div class="overflow-hidden"> 
+  <v-main class="scroll-y">
+
+   <navbar />
+
+    <v-parallax 
+    src="/home.png"
+    style="height:100vh"
+    >
+    <v-overlay absolute>
+    <v-container>
+      
+        <v-row>
+          <v-col align="center" class="">
+                
+            <h1>
+                Welcome to the<br>home of the<br>#Savikindo  
+            </h1>
+          </v-col>
+        </v-row>
+        
+    </v-container>
+    </v-overlay>
+    </v-parallax>
+
+</v-main>
+</div>
+
+
+</template>
+
+<script>
+// import navbar from '../components/navbar.vue'
+export default {
+  // components: { navbar },
+>>>>>>> 52784ee (Home Page)
   data() {
     return {
       smk: 'SMKN 13 BANDUNG',
@@ -75,8 +114,13 @@ export default {
 </script>
 
 <style lang="scss">
+<<<<<<< HEAD
 .marquees {
   color: red;
   font-weight: bold;
 }
+=======
+
+  
+>>>>>>> 52784ee (Home Page)
 </style>

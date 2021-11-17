@@ -1,9 +1,17 @@
 <template>
   <v-app dark>
     <v-main>
+<<<<<<< HEAD
       <v-container>
         <Nuxt />
       </v-container>
+=======
+      <v-container fluid class="pa-0">
+        <Nuxt />
+        
+      </v-container>
+      
+>>>>>>> 52784ee (Home Page)
     </v-main>
     <v-footer :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -38,3 +46,12 @@ export default {
   },
 }
 </script>
+<<<<<<< HEAD
+=======
+
+<style scoped>
+  v-main{
+    
+  }
+</style>
+>>>>>>> 52784ee (Home Page)
