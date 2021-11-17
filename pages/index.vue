@@ -1,76 +1,54 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="px-8 py-5">
-        <NuxtLogo />
-        <VuetifyLogo />
-        <h2 class="py-10 text-center">Selamat datang {{ smk }}</h2>
-        <p>Semangatnya bikin landing pagenya!</p>
-        <p class="mb-0">Referensi website it company :</p>
-        <a href="https://www.xtremax.com" target="_blank"
-          >https://www.xtremax.com</a
-        >
-        <a href="https://www.efishery.com/" target="_blank"
-          >https://www.efishery.com/
-        </a>
-        <a href="https://www.mitrais.com/" target="_blank"
-          >https://www.mitrais.com/</a
-        >
-        <a href="https://www.voxteneo.com/" target="_blank"
-          >https://www.voxteneo.com/</a
-        >
+  <v-main class="pa-0 black">
+    <v-container 
+    class="pt-5 black fill-height"
+    style= "height:100vh"
+    fluid>
+      <v-row justify="space-around" align="center">
+        
+        <!-- Bagian 1 -->
+        <v-col cols="12" sm="8" md="4" align-self="center">
+            <v-card 
+            class="px-5 py-1 mx-4"
+            max-width="100%"
+            color="black white--text">
+                <h1 class="mb-5 text-h5 text-sm-h4">Welcome to the home of Savikindo Tech</h1>
+                <hr class="mb-2">
+                <span class="text-subtitle-1">Kami adalah Education Technology Startup yang berpusat di Bandung, Indonesia</span>
+            </v-card>
 
-        <p class="mb-0 mt-4">Referensi landing page yg bagus banyak disini :</p>
-        <a href="https://themeforest.net/" target="_blank"
-          >https://themeforest.net/</a
-        >
+        </v-col>
+        <v-col cols="auto">
+          <v-img src="/welcome.jpg" width="510" class="hidden-sm-and-down ml-md-5"></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
 
-        <p class="mb-0 mt-4">
-          Referensi icon atau image buat di halaman website :
-        </p>
-        <a href="https://undraw.co/" target="_blank">https://undraw.co/ </a>
-        <a href="https://www.flaticon.com/ " target="_blank"
-          >https://www.flaticon.com/
-        </a>
-        <a href="https://unsplash.com/" target="_blank"
-          >https://unsplash.com/</a
-        >
-
-        <p class="mb-0 mt-4">ini website nuxt :</p>
-        <a href="https://nuxtjs.org/" target="_blank">https://nuxtjs.org/</a>
-
-        <p class="mb-0 mt-4">
-          ini website vuetify buat component sama cssnya :
-        </p>
-        <a href="https://vuetifyjs.com/en/" target="_blank"
-          >https://vuetifyjs.com/en/</a
-        >
-
-        <marquee behavior="" direction="" class="marquees mt-10">{{
-          semangat
-        }}</marquee>
-      </v-card>
-    </v-col>
-  </v-row>
+    <!-- Bagian 2 -->
+    <v-container class="white pb-10" style="height:auto" fluid>
+      <br><br>
+      <v-row justify="center" align="center" >
+        <v-col cols="auto">
+          <v-img src="our.svg" height="200px" width="200px"></v-img>
+        </v-col>
+        </v-row>
+        <v-row justify="center">
+        <v-col  cols="auto" >
+             <div class="mb-2 text-h4 text-center ">
+              Tentang Kami
+            </div>
+            <div class="subtitle 1 text-center text-xs-caption">
+              Produk kami berkonsentrasi pada sistem teknologi pendidikan yang dapat mengakomodir kebutuhan perkembangan pendidikan &amp; sesuai dengan format kebijakan yang diterbitkan oleh Kementerian Pendidikan dan Kebudayaan Indonesia.
+            </div>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-main>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      smk: 'SMKN 13 BANDUNG',
-      semangat: 'SEMANGAT MEREUN GAIS!!!',
-    }
-  },
-  computed: {
-    // ini buat bikin data yg reactive
-  },
-  mounted() {
-    // ini biasanya buat manggil fungsi di method yg harus di panggil di awal page di load
-  },
-  methods: {
-    // ini buat function event
-  },
+ 
 }
 </script>
 
@@ -79,4 +57,8 @@ export default {
   color: red;
   font-weight: bold;
 }
+h1 {
+  text-align: center;
+}
+
 </style>
