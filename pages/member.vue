@@ -10,16 +10,20 @@
     </v-row>
     </v-container>
 
+    <v-container
+    class="black"
+    fluid
+    >
         <div
         align = "center"
         >
 
         <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->
         <v-container
-        class = "mb-5 table hidden-sm-and-up"
         v-for= "(part, a) in parts"
         :key= "a"
         :class= "part.warna"
+        class = "mb-5 table hidden-sm-and-up"
         style = "height:auto; border:20px solid black;"
         static  
         >
@@ -50,7 +54,8 @@
                         <v-img src="https://via.placeholder.com/120x160"></v-img>
                         <v-card-text>
                            <hr>
-                            {{orang.nama}}
+                            
+                           <v-text class=" subtitle-2">{{orang.nama}}</v-text> 
                             <hr>
                         </v-card-text>
                     </v-card>
@@ -63,11 +68,11 @@
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 hidden-xs-only"
+        class="mb-5 hidden-xs-only con"
         :class= "part.warna"
         :style= "part.height"
-        style = "border-radius:20px"
         static  
+        fluid
         >
         <br>
         <v-row justify="center">
@@ -105,6 +110,7 @@
                 </v-row>
         </v-container>
         </div>
+        </v-container>
     </v-main>
 </template>
 

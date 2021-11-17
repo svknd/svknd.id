@@ -1,27 +1,29 @@
 <template>
-    <v-main class="cyan accent-2">
+<v-container>
+    <v-row justify="center">
+        <v-col cols="auto">
+            <v-text class="text-h4 font-weight-bold title1">INTERNSHIP</v-text>
+        </v-col>
+    </v-row>
+
+    <v-row>
+   <v-container class="black">
         <div
         align = "center"
+        fluid   
         >
 
         <!-- Meresponsivekan Justify menggunakan cara manual pada ukuran tablet ke bawah -->
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con hidden-sm-and-up teal darken-3 mb-16"
-        :style= "part.height"
-        static  
+        class="mb-5 con hidden-sm-and-up con1"
+        fluid
         >
-        <br>
-        <v-row justify="center">
-            <v-col cols="auto">
-                <v-text class="text-h5 font-weight-bold white--text">Internship</v-text>
-            </v-col>
-        </v-row>
-        
         <v-row 
         class="mx-15 overflow-x-auto flex-nowrap" 
-        justify= "start" 
+        justify= "start"
+        fill-height 
         >
             <v-col
             v-for= "(orang, n) in part.card"
@@ -52,19 +54,13 @@
         <v-container
         v-for= "(part, a) in parts"
         :key= "a"
-        class="mb-5 con hidden-xs-only teal darken-3 mb-16"
-        :style= "part.height"
-        static  
+        class="mb-5 con hidden-xs-only con1"
+        fluid
         >
-        <br>
-        <v-row justify="center">
-            <v-col cols="auto">
-                <v-text class="text-h5 font-weight-bold white--text">Internship</v-text>
-            </v-col>
-        </v-row>
         <v-row 
         class="mx-15 overflow-x-auto flex-nowrap" 
         :justify= "(part.card.length < 5) ? 'center' : 'start'"
+        fill-height
         >
             <v-col
             v-for= "(orang, n) in part.card"
@@ -92,7 +88,10 @@
                 <br>
         </v-container>
         </div>
-    </v-main>
+        <br><br>
+    </v-container>
+</v-row>
+</v-container>
 </template>
 
 <script>
@@ -137,9 +136,17 @@ export default {
 </script>
 
 <style scoped>
+.title1 {
+    color: rgb(0, 102, 77);  
+}
+
 .con {
     border: 5px solid black;
     border-radius: 20px;
+}
+
+.con1 {
+    background-color: #3F3D56;
 }
 
 .card {
