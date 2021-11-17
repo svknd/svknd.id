@@ -1,0 +1,102 @@
+<template>
+  <v-app-bar
+    class="transparent elevation-0"
+    app
+  >
+    <v-menu
+      transition="slide-y-transition"
+      bottom
+      offset-y
+    >
+      <template #activator="{ on, attrs }">
+        <v-btn
+          class="hidden-sm-and-up"
+          plain
+          icon
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon color="black">mdi-menu</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item
+          v-for="(menu, i) in menus"
+          :key="i"
+          :href="menu.link"
+          dense
+        >
+          <v-list-item-icon>
+            <v-icon>{{ menu.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ menu.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+    <v-toolbar-title
+      :class="computedColor ? 'white--text' : 'black--text'"
+      class="hidden-xs-only"
+    >
+      <h2 class="font-weight-medium">Svknd.id</h2>
+    </v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-toolbar-items
+      v-for="(menu, i) in menus"
+      :key="i"
+      class="hidden-xs-only"
+    >
+      <v-btn
+        :class="computedColor ? 'white--text' : 'black--text'"
+        :href="menu.link"
+        text
+      >
+        <v-icon class="pr-2" small>{{ menu.icon }}</v-icon>
+        {{ menu.title }}
+      </v-btn>
+    </v-toolbar-items>
+  </v-app-bar>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      scrollY: 0,
+      windowHeight: 0,
+      menus: [
+        { title: 'Home', icon: 'mdi-home', link: '/' },
+        { title: 'Members', icon: 'mdi-account-group', link: '/members' },
+        { title: 'Internship', icon: 'mdi-school', link: '/internship' },
+        { title: 'Join Us', icon: 'mdi-briefcase-check', link: '/join' },
+      ],
+    }
+  },
+  computed: {
+     computedColor () {
+      return (this.scrollY < this.windowHeight - 50)
+        && (this.$route.name === 'index')
+    }
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleHeight);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleHeight);
+  },
+  mounted() {
+    this.$nextTick(function () {
+      this.windowHeight = window.innerHeight;
+    });
+  },
+  methods: {
+    handleScroll () {
+      this.scrollY = window.scrollY;
+    },
+    handleHeight () {
+      this.windowHeight = window.innerHeight;
+    }
+  }
+}
+</script>
